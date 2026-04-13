@@ -9,20 +9,18 @@ const totalDisplay = document.getElementById("total");
 let foods = JSON.parse(localStorage.getItem("foods")) || [];
 
 // 3. FETCH API FUNCTION  - SIMULATING CALORIE FETCHING
-async function fetchCalories(foodName) {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-    const data = await response.json();
-
-    console.log("API data:", data);
-
-    return Math.floor(Math.random() * 500);
-  } catch (error) {
-    console.error("Fetch error:", error);
-    return 0;
-  }
-}
-
+async function getNutrition(food) {
+  const response = await fetch(
+    `https://api.api-ninjas.com/v1/nutrition?query=${food}`,
+    {
+        method: "GET",
+        headers: {
+          "X-Api-Key":"xayGaWWNgDF76bib3xFgvcFPlbPg77I2nLvE5smB",
+          'content-Type': "application/json",
+        }
+      }
+      
+    )};
 // 4. RENDER FUNCTION
 function renderFoods() {
   foodList.innerHTML = "";
