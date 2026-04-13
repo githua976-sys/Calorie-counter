@@ -8,7 +8,7 @@ const totalDisplay = document.getElementById("total");
 // 2. GLOBAL VARIABLES
 let foods = JSON.parse(localStorage.getItem("foods")) || [];
 
-// 3. FETCH API FUNCTION  ✅ (YES, put it here)
+// 3. FETCH API FUNCTION  - SIMULATING CALORIE FETCHING
 async function fetchCalories(foodName) {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
