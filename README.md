@@ -16,4 +16,4 @@
 2. Open index.html in browser
 
 ## Deployment
-Live link: (add your link here)
+Live link: (https://githua976-sys.github.io/Calorie-counter/)
